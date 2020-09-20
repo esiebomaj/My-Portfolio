@@ -1,0 +1,34 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d5346a2d.chunk.css",
+    "main.js": "/static/js/main.f5dec64c.chunk.js",
+    "main.js.map": "/static/js/main.f5dec64c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.0ed6e50a.js",
+    "runtime-main.js.map": "/static/js/runtime-main.0ed6e50a.js.map",
+    "static/css/2.5dc3c415.chunk.css": "/static/css/2.5dc3c415.chunk.css",
+    "static/js/2.51ca7e54.chunk.js": "/static/js/2.51ca7e54.chunk.js",
+    "static/js/2.51ca7e54.chunk.js.map": "/static/js/2.51ca7e54.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.bffae44050a40bbd797faa4f6c21ef82.js": "/precache-manifest.bffae44050a40bbd797faa4f6c21ef82.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.5dc3c415.chunk.css.map": "/static/css/2.5dc3c415.chunk.css.map",
+    "static/css/main.d5346a2d.chunk.css.map": "/static/css/main.d5346a2d.chunk.css.map",
+    "static/js/2.51ca7e54.chunk.js.LICENSE.txt": "/static/js/2.51ca7e54.chunk.js.LICENSE.txt",
+    "static/media/hero.css": "/static/media/bg4.df44b421.png",
+    "static/media/Locator.png": "/static/media/Locator.6fffe478.png",
+    "static/media/Skill.png": "/static/media/Skill.0ff21b26.png",
+    "static/media/bg.jpg": "/static/media/bg.dde4aa63.jpg",
+    "static/media/carigo.png": "/static/media/carigo.0516c934.png",
+    "static/media/chevron.png": "/static/media/chevron.327cd0e0.png",
+    "static/media/django.png": "/static/media/django.69403a8a.png",
+    "static/media/all.css": "/static/media/fa-solid-900.ee09ad75.woff",
+    "static/media/more.png": "/static/media/more.ac4d2288.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0ed6e50a.js",
+    "static/css/2.5dc3c415.chunk.css",
+    "static/js/2.51ca7e54.chunk.js",
+    "static/css/main.d5346a2d.chunk.css",
+    "static/js/main.f5dec64c.chunk.js"
+  ]
+}

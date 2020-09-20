@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../images/Jeremiah1.png";
-import "../common/navBar.css";
+import logo from "../../../images/Jeremiah1.png";
+import "../navBar/navBar.css";
 
 class NavBar extends Component {
   state = { scrollTop: 0 };
@@ -16,9 +16,13 @@ class NavBar extends Component {
 
   handleScroll = () => {
     const scrollTop = window.pageYOffset;
-    console.log(scrollTop);
     this.setState({ scrollTop });
   };
+
+  handleSectionScroll(section) {
+    Location = "/";
+    document.querySelector(section).scrollIntoView({ behavior: "smooth" });
+  }
 
   generateNavClasses = () => {
     let classes = "navbar navbar-expand-lg animated ";
@@ -31,17 +35,9 @@ class NavBar extends Component {
   };
 
   render() {
-    const { onDarkModeToggle, darkMode } = this.props;
+    const { onDarkModeToggle } = this.props;
     return (
-      <nav
-        className={this.generateNavClasses()}
-        // onScroll={this.handleScroll}
-        // class={
-        //   darkMode === true
-        //     ? "navbar navbar-expand-lg navbar-dark bg-dark"
-        //     : "navbar navbar-expand-lg navbar-light bg-primary"
-        // }
-      >
+      <nav className={this.generateNavClasses()}>
         <Link class="navbar-brand" to="/">
           <img src={logo} alt="Jeremiah" />
         </Link>
@@ -63,22 +59,34 @@ class NavBar extends Component {
                 Blog
               </Link>
             </li>
-            <li class="nav-item">
+            <li
+              class="nav-item"
+              onClick={() => this.handleSectionScroll(".skill-section")}
+            >
               <Link class="nav-link" to="">
                 Skills
               </Link>
             </li>
-            <li class="nav-item">
+            <li
+              class="nav-item"
+              onClick={() => this.handleSectionScroll(".project-section")}
+            >
               <Link class="nav-link" to="">
                 Projects
               </Link>
             </li>
-            <li class="nav-item">
+            <li
+              class="nav-item"
+              onClick={() => this.handleSectionScroll(".experience-section")}
+            >
               <Link class="nav-link" to="">
                 Experience
               </Link>
             </li>
-            <li class="nav-item">
+            <li
+              class="nav-item"
+              onClick={() => this.handleSectionScroll(".contact-section")}
+            >
               <Link class="nav-link" to="">
                 Contact
               </Link>

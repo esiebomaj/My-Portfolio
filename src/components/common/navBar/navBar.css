@@ -49,8 +49,12 @@
   display: flex !important;
   justify-content: space-between !important;
 }
-.bg-primary {
-  background-color: #0b63c7 !important;
+.navbar.bg-primary {
+  background-color: #0b4f9e !important;
+}
+
+.navbar.bg-dark {
+  background-color: #222529 !important;
 }
 
 .navbar-collapse {
@@ -63,11 +67,7 @@
     0 4px 8px 0 rgba(17, 22, 26, 0.08), 0 8px 16px 0 rgba(17, 22, 26, 0.08);
   transition: all 0.4s ease-in-out;
 }
-/* .navbar-brand img:hover {
-  box-shadow: 0 0 8px 0 rgba(17, 22, 26, 0.16),
-    0 4px 8px 0 rgba(17, 22, 26, 0.08), 0 8px 16px 0 rgba(17, 22, 26, 0.08);
-  transition: all 0.4s ease-in-out;
-} */
+
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -100,7 +100,7 @@
 
 .slider:before {
   position: absolute;
-  content: url(../../images/sun.png);
+  content: url(../../../images/sun.png);
   height: 26px;
   width: 26px;
   left: 4px;
@@ -123,7 +123,7 @@ input:focus + .slider {
 }
 
 input:checked + .slider:before {
-  content: url(../../images//moon.png);
+  content: url(../../../images//moon.png);
   -webkit-transform: translateX(26px);
   -ms-transform: translateX(26px);
   transform: translateX(26px);

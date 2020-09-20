@@ -1,9 +1,17 @@
 import React, { Component } from "react";
+import Emoji from "./../common/Emoji";
+import "./pageNotFound.css";
 
 class PageNotFound extends Component {
   state = {};
   render() {
-    return <h1>Page Not Found</h1>;
+    return (
+      <section className="page-not-found">
+        <h1>
+          <Emoji symbol="😔" /> Page Not Found <Emoji symbol="😔" />{" "}
+        </h1>
+      </section>
+    );
   }
 }
 

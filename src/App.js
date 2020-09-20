@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
 import BlogHome from "./components/blog/blogHome";
-import NavBar from "./components/common/navBar";
+import NavBar from "./components/common/navBar/navBar";
 import Home from "./components/home/home";
 import PageNotFound from "./components/pageNotFound/pageNotFound";
 import Footer from "./components/common/footer/footer";
@@ -10,7 +10,20 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 
 class App extends Component {
-  state = { darkMode: false };
+  state = { darkMode: false, scrollTop: 0, componentInViewPort: "" };
+
+  componentDidMount() {
+    window.addEventListener("scroll", this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", this.handleScroll);
+  }
+
+  handleScroll = () => {
+    const scrollTop = window.pageYOffset;
+    this.setState({ scrollTop });
+  };
 
   handleDarkModeToggle = () => {
     const darkMode = !this.state.darkMode;
@@ -25,7 +38,17 @@ class App extends Component {
           darkMode={this.state.darkMode}
         />
         <Switch>
-          <Route exact={true} path="/" component={Home} />
+          <Route
+            exact={true}
+            path="/"
+            render={(props) => (
+              <Home
+                {...props}
+                scrollTop={this.state.scrollTop}
+                darkMode={this.state.darkMode}
+              />
+            )}
+          />
           <Route path="/blog/" component={BlogHome} />
           <Route path="/page_not_found/" component={PageNotFound} />
           <Redirect to="/page_not_found/" />
