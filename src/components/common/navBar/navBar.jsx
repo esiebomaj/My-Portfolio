@@ -4,21 +4,6 @@ import logo from "../../../images/Jeremiah1.png";
 import "../navBar/navBar.css";
 
 class NavBar extends Component {
-  state = { scrollTop: 0 };
-
-  componentDidMount() {
-    window.addEventListener("scroll", this.handleScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("scroll", this.handleScroll);
-  }
-
-  handleScroll = () => {
-    const scrollTop = window.pageYOffset;
-    this.setState({ scrollTop });
-  };
-
   handleSectionScroll(section) {
     Location = "/";
     document.querySelector(section).scrollIntoView({ behavior: "smooth" });
@@ -26,21 +11,48 @@ class NavBar extends Component {
 
   generateNavClasses = () => {
     let classes = "navbar navbar-expand-lg animated ";
-    if (this.state.scrollTop > 170) {
-      classes = classes + " fixed-top fadeInDown  shadow";
+    if (this.props.scrollTop > 170) {
+      classes = classes + " fixed-top fadeInDown shadow";
     }
     return this.props.darkMode === true
       ? classes + " navbar-dark bg-dark"
       : classes + " navbar-light bg-primary ";
   };
 
+  navLinks = [
+    { name: "Blog", path: "/blog/" },
+    {
+      name: "Skills",
+      path: "",
+      section: ".skill-section",
+    },
+    {
+      name: "Projects",
+      path: "",
+      section: ".project-section",
+    },
+    {
+      name: "Experience",
+      path: "",
+      section: ".experience-section",
+    },
+    {
+      name: "Contact",
+      path: "",
+      section: ".contact-section",
+    },
+  ];
+
   render() {
     const { onDarkModeToggle } = this.props;
     return (
       <nav className={this.generateNavClasses()}>
+        {/* nav brand */}
         <Link class="navbar-brand" to="/">
           <img src={logo} alt="Jeremiah" />
         </Link>
+
+        {/* nav toggler  */}
         <button
           class="navbar-toggler"
           type="button"
@@ -52,45 +64,25 @@ class NavBar extends Component {
         >
           <span class="navbar-toggler-icon"></span>
         </button>
+
+        {/* nav links  */}
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
-            <li class="nav-item active">
-              <Link class="nav-link" to="/blog/">
-                Blog
-              </Link>
-            </li>
-            <li
-              class="nav-item"
-              onClick={() => this.handleSectionScroll(".skill-section")}
-            >
-              <Link class="nav-link" to="">
-                Skills
-              </Link>
-            </li>
-            <li
-              class="nav-item"
-              onClick={() => this.handleSectionScroll(".project-section")}
-            >
-              <Link class="nav-link" to="">
-                Projects
-              </Link>
-            </li>
-            <li
-              class="nav-item"
-              onClick={() => this.handleSectionScroll(".experience-section")}
-            >
-              <Link class="nav-link" to="">
-                Experience
-              </Link>
-            </li>
-            <li
-              class="nav-item"
-              onClick={() => this.handleSectionScroll(".contact-section")}
-            >
-              <Link class="nav-link" to="">
-                Contact
-              </Link>
-            </li>
+            {this.navLinks.map((item, key) => (
+              <li key={key} class="nav-item active">
+                <Link
+                  class="nav-link"
+                  to={item.path}
+                  onClick={
+                    item.section
+                      ? () => this.handleSectionScroll(item.section)
+                      : null
+                  }
+                >
+                  {item.name}
+                </Link>
+              </li>
+            ))}
           </ul>
 
           {/* dark mode switch */}

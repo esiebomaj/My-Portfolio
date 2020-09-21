@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import myImage from "../../../images/bg.jpg";
-import "../hero/hero.css";
+import Social from "../../common/social/social";
 import Emoji from "../../common/Emoji";
+import "../hero/hero.css";
 
 class Hero extends Component {
   state = { blinkText: "" };
@@ -45,29 +46,7 @@ class Hero extends Component {
               alt="Esieboma Jeremiah"
             />
           </div>
-
-          <div className="social">
-            <div className="icon-container">
-              <a className="icon" href="https://facebook.com/esiebomaj">
-                <i class="fab fa-facebook-f"></i>
-              </a>
-            </div>
-            <div className="icon-container">
-              <a className="icon" href="https://twitter.com/EsiebomaJ">
-                <i class="fab fa-twitter"></i>
-              </a>
-            </div>
-            <div className="icon-container">
-              <a className="icon" href="https://github.com/esiebomaj">
-                <i class="fab fa-github"></i>
-              </a>
-            </div>
-            <div className="icon-container">
-              <a className="icon" href="https://www.instagram.com/jesieboma/">
-                <i class="fab fa-instagram"></i>
-              </a>
-            </div>
-          </div>
+          <Social />
         </div>
         <div className="right">
           <div ref={this.introTextRef} className="intro-text">

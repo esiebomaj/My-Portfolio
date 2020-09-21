@@ -67,6 +67,7 @@
     0 4px 8px 0 rgba(17, 22, 26, 0.08), 0 8px 16px 0 rgba(17, 22, 26, 0.08);
   transition: all 0.4s ease-in-out;
 }
+/* --------------------------Dark mode switch ---------------------------------- */
 
 /* The switch - the box around the slider */
 .switch {

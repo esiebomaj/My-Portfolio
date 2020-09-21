@@ -8,12 +8,13 @@ import "../home/home.css";
 
 class Home extends Component {
   render() {
+    const { scrollTop, darkMode } = this.props;
     return (
       <div
-        style={this.props.scrollTop > 170 ? { marginTop: "90px" } : {}}
+        style={scrollTop > 170 ? { marginTop: "90px" } : {}}
         className="page"
       >
-        <Hero darkMode={this.props.darkMode} />
+        <Hero darkMode={darkMode} />
         <SkillSection />
         <Projects />
         <Experience />

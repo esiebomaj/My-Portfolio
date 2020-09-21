@@ -10,7 +10,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
 
 class App extends Component {
-  state = { darkMode: false, scrollTop: 0, componentInViewPort: "" };
+  state = { darkMode: false, scrollTop: 0 };
 
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
@@ -21,8 +21,7 @@ class App extends Component {
   }
 
   handleScroll = () => {
-    const scrollTop = window.pageYOffset;
-    this.setState({ scrollTop });
+    this.setState({ scrollTop: window.pageYOffset });
   };
 
   handleDarkModeToggle = () => {
@@ -34,6 +33,7 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar
+          scrollTop={this.state.scrollTop}
           onDarkModeToggle={this.handleDarkModeToggle}
           darkMode={this.state.darkMode}
         />

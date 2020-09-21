@@ -1,0 +1,43 @@
+.social {
+  display: flex;
+  margin: 20px;
+}
+
+.social a:hover,
+.social a:focus {
+  text-decoration: none;
+  outline: 0;
+}
+
+.icon-container {
+  border: 3px solid rgb(194 110 114);
+  color: rgb(194 110 114);
+  border-radius: 50%;
+  background-color: black;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.footer .icon-container {
+  border: 3px solid rgb(7 43 39);
+  color: rgb(7 43 39);
+  background-color: #f8f9fa;
+}
+
+.icon-container:hover {
+  border: 2px solid #0b63c7;
+  color: #0b63c7;
+}
+
+.icon-container:hover .icon {
+  color: #0b63c7;
+}
+
+.icon {
+  color: rgb(194 110 114);
+  font-size: 1.2em;
+}
