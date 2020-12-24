@@ -25,12 +25,11 @@
 }
 
 .project-section-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
 }
 .project-item {
-  width: 28%;
+  /* width: 28%; */
   margin: 1em;
   position: relative;
   transition: all 0.2s ease-in-out;
@@ -68,6 +67,56 @@
   background-color: #030600d4;
 }
 
+.git-btn{
+  padding: .05em 1em;
+  color: white;
+  background: #0b4f9e;
+  border: 0;
+  margin: .5em;
+  border-radius: 3px;
+  font-size: 1.1em;
+  transition: .2s ease-in-out all;
+}
+.live-btn{
+  padding: .05em 1em;
+  color: #0b4f9e;
+  background: white;
+  border: 0;
+  margin: .5em;
+  border-radius: 3px;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: .2s ease-in-out all;
+}
+.video-btn{
+  padding: .05em 1em;
+  color: red;
+  background: white;
+  border: 0;
+  margin: .5em;
+  border-radius: 3px;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: .2s ease-in-out all;
+}
+
+.video-btn:hover{
+  color: white;
+  background: red;
+}
+
+.live-btn:hover{
+  color: white;
+  background: #0b4f9e;
+  transition: .2s ease-in-out all;
+}
+
+.git-btn:hover{
+  color: #0b4f9e;
+  background: white;
+  transition: .2s ease-in-out all;
+}
+
 .fa-react {
   color: lightblue;
 }
@@ -99,19 +148,60 @@
     width: auto;
     text-align: center;
   }
-  .project-item {
-    width: 40%;
+
+  .project-section-main {
+    display: grid;
+    grid-template-columns: auto auto;
   }
+
+  .project-item {
+    margin: 2em;
+  }
+
   .project-item h3 {
     margin: 0;
     font-size: 1.5rem;
   }
 }
 
-@media (max-width: 450px) {
+.video-component{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;  
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #131212bb;
+}
+
+.none{
+  display: none;
+}
+
+@media (max-width: 800px) {
   .project-item {
-    width: 95%;
+    margin: 0.5em;
   }
+  .video-btn, .git-btn, .live-btn{
+    margin: .2em;
+    padding: .05em .5em;
+  }
+}
+
+@media (max-width: 600px) {
+  .project-section-main {
+    display: grid;
+    grid-template-columns: auto;
+  }
+
+  .project-item {
+    margin: 2em;
+  }
+}
+
+@media (max-width: 450px) {
   .project-item h3 {
     margin: 0;
     font-size: 1.5rem;

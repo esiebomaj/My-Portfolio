@@ -8,6 +8,7 @@ class NavBar extends Component {
     Location = "/";
     document.querySelector(section).scrollIntoView({ behavior: "smooth" });
   }
+  
 
   generateNavClasses = () => {
     let classes = "navbar navbar-expand-lg animated ";
@@ -19,8 +20,9 @@ class NavBar extends Component {
       : classes + " navbar-light bg-primary ";
   };
 
-  navLinks = [
-    { name: "Blog", path: "/blog/" },
+
+
+  navLinks =  [
     {
       name: "Skills",
       path: "",
@@ -67,7 +69,15 @@ class NavBar extends Component {
 
         {/* nav links  */}
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            
           <ul class="navbar-nav">
+
+          <li  class="nav-item active">
+                <Link class="nav-link" to='/' >
+                  Home
+                </Link>
+              </li>
+
             {this.navLinks.map((item, key) => (
               <li key={key} class="nav-item active">
                 <Link
@@ -83,6 +93,11 @@ class NavBar extends Component {
                 </Link>
               </li>
             ))}
+            <li  class="nav-item active blog">
+                <Link class="nav-link" to='/blog/' >
+                  Blog
+                </Link>
+              </li>
           </ul>
 
           {/* dark mode switch */}

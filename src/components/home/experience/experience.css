@@ -35,6 +35,9 @@
 
 .experience-section h3 {
   font: "opensans-bold", sans-serif;
+  display: inline-flex;
+  margin-right: 1em;
+  margin-bottom: .6em;
 }
 
 .experience-section .info {
@@ -55,7 +58,16 @@
 }
 
 .experience-item {
-  padding: 0 0 2em 0;
+  padding: 1.5em 0 1.5em 0;
+}
+.experience-item li{
+  margin: .5em 0;
+}
+
+
+.experience-item .info{
+  font-weight: bold;
+  font-size: 1.2em;
 }
 
 @media (max-width: 770px) {

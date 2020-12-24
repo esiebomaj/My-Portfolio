@@ -8,6 +8,10 @@ import Footer from "./components/common/footer/footer";
 import "../src/images//fontawesome-free-5.14.0-web/css/all.css";
 import "bootstrap/dist/css/bootstrap.css";
 import "./App.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+AOS.init();
 
 class App extends Component {
   state = { darkMode: false, scrollTop: 0 };

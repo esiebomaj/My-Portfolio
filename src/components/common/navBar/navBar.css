@@ -67,6 +67,46 @@
     0 4px 8px 0 rgba(17, 22, 26, 0.08), 0 8px 16px 0 rgba(17, 22, 26, 0.08);
   transition: all 0.4s ease-in-out;
 }
+
+.nav-item{
+  display: flex;
+  align-items: center;
+}
+
+.nav-item.blog{
+  width: fit-content;
+  background: #ffc83d;
+  color: white !important;
+  font-weight: bold;
+  padding:0em 1.5em;
+  margin: .5em;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.nav-item.blog:hover{
+  background-color: white;
+  
+}
+
+
+.nav-link{
+  font-size: 1.2em;
+  font-weight: 500;
+  transition: .2s ease-in-out all;
+}
+
+.nav-link:hover{
+  color: white !important;
+  transition: .2s ease-in-out all;
+}
+
+.nav-item.blog:hover .nav-link{
+    color: #ffc83d !important;
+  
+}
+
+
 /* --------------------------Dark mode switch ---------------------------------- */
 
 /* The switch - the box around the slider */
