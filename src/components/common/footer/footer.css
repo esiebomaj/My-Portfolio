@@ -148,7 +148,7 @@
   .footer-main{
     padding: 1em 2em;
   }
-  .footer img {
+  .footer img, .footer-dark img {
     width: 200px;
     margin-right: 20px;
     cursor: pointer;
@@ -159,7 +159,7 @@
   .footer-main{
     padding: 1em 1em;
   }
-  .footer img {
+  .footer img, .footer-dark img {
     width: 200px;
     margin-right: 20px;
     cursor: pointer;
@@ -171,7 +171,7 @@
   .footer-main{
     padding: 1em 1em;
   }
-  .footer img {
+  .footer img, .footer-dark img{
     width: 180px;
     margin-right: 10px;
     cursor: pointer;
@@ -180,7 +180,7 @@
 }
 
 @media (max-width: 740px) {
-  .footer img {
+  .footer img, .footer-dark img {
     width: 200px;
     margin-bottom: 2em;
   }
