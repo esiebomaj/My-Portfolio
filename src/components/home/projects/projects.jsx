@@ -8,7 +8,7 @@ import ReactPlayer from 'react-player'
 import {useState} from 'react'
 import "./projects.css";
 
-const Projects = () => {
+const Projects = ({darkMode}) => {
   const [ProjectVideo, setProjectVideo]=useState({showing:false, playing:false})
 
   const unshowVideo=()=>{
@@ -20,7 +20,7 @@ const Projects = () => {
   }
 
   return (
-    <section className="project-section">
+    <section className={darkMode?"project-section project-section-dark":"project-section"}>
       <div className="project-section-header">
         <h1>My projects</h1>
       </div>

@@ -15,10 +15,10 @@ class Home extends Component {
         className="page"
       >
         <Hero darkMode={darkMode} />
-        <SkillSection />
-        <Projects />
-        <Experience />
-        <Contact />
+        <SkillSection darkMode={darkMode} />
+        <Projects  darkMode={darkMode}/>
+        <Experience darkMode={darkMode}/>
+        <Contact darkMode={darkMode}/>
       </div>
     );
   }

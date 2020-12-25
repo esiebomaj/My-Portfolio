@@ -4,9 +4,9 @@ import bleatechLogo from "../../../images/bleau.png";
 import yediLogo from "../../../images/unnamed.jpg";
 import "./experience.css";
 
-const Experience = () => {
+const Experience = ({darkMode}) => {
   return (
-    <section className="experience-section">
+    <section className={darkMode?"experience-section-dark experience-section":"experience-section"}>
       <div className="header-col">
         <h1>
           <span>Experience</span>

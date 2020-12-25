@@ -1,4 +1,4 @@
-.footer {
+/* .footer {
   position: relative;
   flex-direction: column;
   padding: 1.5em;
@@ -35,4 +35,179 @@
 
 .footer a {
   color: black;
+} */
+
+
+
+
+
+
+
+
+
+
+.footer{
+  background: #011025;
+}
+
+.footer-dark{
+  background: #222529;
+}
+.footer-text{
+  margin: 0;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.footer-text a{
+  margin-left: .5em;
+  color:#ff9900;
+  text-decoration: none;
+  font-size: 1.4em;
+}
+
+.footer-text a:hover{
+  color: white;
+  text-decoration: none;
+}
+.footer-main {
+  
+  display: flex;
+  padding: 1em 6em;
+  flex-direction: row;
+  font-size: 1.1em;
+}
+
+.footer-logo-cont {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.footer img {
+  width: 300px;
+  margin-right: 20px;
+  cursor: pointer;
+  box-shadow: 5px 5px 5px white;
+}
+
+.footer img:hover {
+  box-shadow: 10px 10px 5px white;
+}
+
+.footer-menu {
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-evenly;
+}
+
+.menu-item {
+  margin: 1em;
+}
+
+.menu-item-header {
+  text-align: center;
+  color: whitesmoke;
+  font-weight: bolder;
+  border-bottom: 1px solid #ff9900;
+  padding-bottom: 0.5em;
+  font-family: AvenirNextLTProBold;
+}
+
+.menu-item ul {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+}
+
+.menu-item li {
+  list-style: none;
+  margin: 1.2em 0.5em;
+  color: whitesmoke;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.menu-item li a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+.menu-item li svg {
+  margin-right: 0.5em;
+}
+
+.menu-item li:hover,
+.menu-item li a:hover {
+  color: #ff9900;
+}
+
+@media (max-width: 1080px) {
+  .footer-main{
+    padding: 1em 2em;
+  }
+  .footer img {
+    width: 200px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 860px) {
+  .footer-main{
+    padding: 1em 1em;
+  }
+  .footer img {
+    width: 200px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+
+}
+
+@media (max-width: 800px) {
+  .footer-main{
+    padding: 1em 1em;
+  }
+  .footer img {
+    width: 180px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+}
+
+@media (max-width: 740px) {
+  .footer img {
+    width: 200px;
+    margin-bottom: 2em;
+  }
+
+  .footer-main {
+    flex-direction: column;
+  }
+  .footer-logo-cont {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 570px) {
+  .footer-menu {
+    flex-direction: column;
+  }
+
+  .menu-item {
+    margin: 0em 1em;
+  }
+
+  .menu-item-header {
+    margin: 0em;
+  }
+
+  .menu-item li {
+    margin: 0.5em 0.5em;
+  }
 }

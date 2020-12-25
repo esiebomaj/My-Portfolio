@@ -7,6 +7,10 @@
   background-color: #0b4f9e;
 }
 
+.skill-section-dark {
+  background-color: #222529 !important;
+}
+
 .skill-section-header {
   width: max-content;
   position: relative;
@@ -54,8 +58,17 @@
   color: white;
 }
 
+.prompt-dark{
+  background-color: #3c3f42;
+
+}
+
 .prompt:hover {
   background-color: #2d64a5;
+}
+
+.prompt-dark:hover{
+  background-color: #5c5e61;
 }
 
 .prompt i {
@@ -100,6 +113,13 @@
   font-size: 1.2em;
   position: relative;
 }
+
+.my-col-dark{
+  background: #3c3f42;
+  color: whitesmoke;
+}
+
+
 .my-col h4 {
   background-color: #0b4f9e;
   padding: 0.2em;
@@ -109,6 +129,10 @@
     0 4px 8px 0 rgba(17, 22, 26, 0.08), 0 8px 16px 0 rgba(17, 22, 26, 0.08);
   position: absolute;
   top: -18px;
+}
+.my-col-dark h4 {
+  background: whitesmoke;
+  color: #3c3f42;
 }
 
 .more-container ul {

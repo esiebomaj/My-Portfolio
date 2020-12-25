@@ -57,7 +57,7 @@ class App extends Component {
           <Route path="/page_not_found/" component={PageNotFound} />
           <Redirect to="/page_not_found/" />
         </Switch>
-        <Footer />
+        <Footer darkMode={this.state.darkMode}/>
       </div>
     );
   }

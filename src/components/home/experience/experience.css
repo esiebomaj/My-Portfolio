@@ -5,6 +5,11 @@
   background-color: white;
 }
 
+.experience-section-dark{
+  background-color: #222529 !important;
+  color: white;
+}
+
 .header-col {
   padding: 0 3em;
 }

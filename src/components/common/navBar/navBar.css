@@ -82,10 +82,12 @@
   margin: .5em;
   border-radius: 5px;
   cursor: pointer;
+  transition: .2s ease-in-out all;
 }
 
 .nav-item.blog:hover{
   background-color: white;
+  transition: .2s ease-in-out all;
   
 }
 

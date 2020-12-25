@@ -19,8 +19,9 @@ class SkillSection extends Component {
   };
 
   render() {
+    const {darkMode}=this.props
     return (
-      <section className="skill-section">
+      <section className={darkMode?"skill-section skill-section-dark":"skill-section"}>
         <div className="skill-section-header">
           <h1>My Stack</h1>
         </div>
@@ -34,14 +35,14 @@ class SkillSection extends Component {
           <div
             ref={this.showMoreRef}
             onClick={this.toggleSkillReveal}
-            className="prompt"
+            className={darkMode?"prompt prompt-dark":"prompt"}
           >
             <p>
               show details <i class="fas fa-chevron-down"></i>
             </p>
           </div>
           <div ref={this.moreRef} className="more">
-            <div className="my-col shadow col">
+            <div className={darkMode?"my-col shadow col my-col-dark":"my-col shadow col"}>
               <h4>Front-end</h4>
               <ul>
                 <li>React JS</li>
@@ -51,7 +52,7 @@ class SkillSection extends Component {
                 <li>Bootstrap</li>
               </ul>
             </div>
-            <div className="my-col shadow col">
+            <div className={darkMode?"my-col shadow col my-col-dark":"my-col shadow col"}>
               <h4>Back-end</h4>
               <ul>
                 <li>Python</li>
@@ -61,7 +62,7 @@ class SkillSection extends Component {
                 <li>SQLite</li>
               </ul>
             </div>
-            <div className="my-col shadow col">
+            <div className={darkMode?"my-col shadow col my-col-dark":"my-col shadow col"}>
               <h4>lots more ..</h4>
               <ul>
                 <li>Github/Git</li>
