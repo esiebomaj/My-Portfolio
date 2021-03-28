@@ -64,7 +64,7 @@ class Hero extends Component {
           </div>
           <div className={darkMode ? "resume-btn dark" : "resume-btn"}>
             <div className="slide"></div>
-            <a target="_blank" href="https://drive.google.com/file/d/1kMcBfxSUhllZhsPr3BFPUA9k4Df2c_Y5/view?usp=sharing">
+            <a target="_blank" href="https://drive.google.com/file/d/16IV3aqoD1HMPUCAbvk4O-5R0RCqB8t9w/view?usp=sharing">
               View Resume
             </a>
           </div>

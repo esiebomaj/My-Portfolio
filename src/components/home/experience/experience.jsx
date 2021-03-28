@@ -21,7 +21,7 @@ const Experience = ({darkMode}) => {
             Fullstack  Developer (Django & React)
             <span>&bull;</span> <em className="date">Oct 2020 - Dec 2020</em>
           </p>
-          <li>I was responsible for building different software applications for company clients.</li>
+          <li>I worked with other engineers to build different software applications for company clients.</li>
           <li>I also used django channels to integrate chatting systems for client application</li>
           <li>I was also responsible for code documentation, generating automated tests.</li>
         
