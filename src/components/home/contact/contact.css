@@ -1,6 +1,10 @@
 .contact-section {
   padding: 1em;
-  /* background-color: #009688e0; */
+}
+
+.contact-section-dark{
+  background: #3c3f42;;
+  color: white;
 }
 
 .contact-section h1 {
@@ -39,28 +43,40 @@
 .contact-section input {
   height: 55px;
   width: 49%;
-  background-color: rgba(0, 0, 0, 0.733);
+  background: #011025;
   border-radius: 0;
   font-size: 1.4em;
   color: white !important;
-  /* border: 3px solid white; */
 }
 
 .contact-section textarea {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.733);
+  background: #011025;
   border-radius: 0;
   font-size: 1.4em;
   color: white !important;
   height: 300px !important; /* border: 3px solid white; */
 }
 
+.contact-section-dark input, .contact-section-dark textarea {
+  background-color:  #3c3f42;
+ }
+
 .contact-section input:focus,
 .contact-section input:active,
 .contact-section textarea:focus,
 .contact-section textarea:active {
-  background-color: rgba(0, 0, 0, 0.733);
-  border: 4px dashed #3d3d3d;
+  background: #011025;
+  border: 4px dashed #e5e5e5;
+  outline: 0;
+  box-shadow: 0 0 rgba(245, 245, 220, 0) !important;
+}
+
+.contact-section-dark input:focus,
+.contact-section-dark input:active,
+.contact-section-dark textarea:focus,
+.contact-section-dark textarea:active {
+  background-color:  #3c3f42;
 }
 
 .send-btn {
@@ -69,7 +85,7 @@
   cursor: pointer;
   width: 100px;
   height: 50px;
-  background: #3d3d3d;
+  background: #011025;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,8 +112,12 @@
   transition: all 0.35s ease-Out;
   bottom: 0;
   color: white;
-  background-color: #3d3d3d;
+  background-color: #052552;
   font-size: 1.2em;
+}
+
+.contact-section-dark .send-arrow, .contact-section-dark .send-btn{
+  background-color: #222529;
 }
 
 .send-arrow i {
@@ -112,6 +132,8 @@
 .send-btn:hover a {
   left: 150px;
 }
+
+
 
 .contact-right {
   justify-content: space-around;
@@ -149,6 +171,12 @@
   color: black;
 }
 
+.contact-item-main .item-title.dark {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: whitesmoke;
+}
+
 .contact-icon-container {
   width: 50px;
   height: 50px;
@@ -157,7 +185,11 @@
   justify-content: center;
   align-items: center;
   margin: 0.5em;
-  border: 4px solid #3d3d3d;
+  border: 4px solid #011025;
+}
+
+.contact-section-dark .contact-icon-container {
+  border: 4px solid #222529;
 }
 
 .contact-icon-container i {

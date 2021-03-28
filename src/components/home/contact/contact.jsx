@@ -3,7 +3,7 @@ import "./contact.css";
 class Contact extends Component {
   render() {
     return (
-      <section className="contact-section">
+      <section className={this.props.darkMode?"contact-section-dark contact-section":"contact-section"}>
         <h1>Contact Me</h1>
         <div className="row">
           <div className="col-sm-6 contact-form-container ">
@@ -45,7 +45,7 @@ class Contact extends Component {
                   <i class="fas fa-phone"></i>
                 </div>
                 <div className="contact-item-main">
-                  <p className="item-title">phone</p>
+                  <p className={this.props.darkMode?"item-title dark":"item-title"}>phone</p>
                   <p>09055808223</p>
                 </div>
               </div>
@@ -54,7 +54,7 @@ class Contact extends Component {
                   <i class="fas fa-envelope"></i>
                 </div>
                 <div className="contact-item-main">
-                  <p className="item-title">email</p>
+                  <p className={this.props.darkMode?"item-title dark":"item-title"}>email</p>
                   <p>esiebomaj@gmail.com</p>
                 </div>
               </div>
@@ -66,7 +66,7 @@ class Contact extends Component {
                   <i class="fas fa-map-marker-alt"></i>
                 </div>
                 <div className="contact-item-main">
-                  <p className="item-title">Address</p>
+                  <p className={this.props.darkMode?"item-title dark":"item-title"}>Address</p>
                   <p>Owerri Imo, state Nigeria</p>
                 </div>
               </div>
@@ -75,9 +75,9 @@ class Contact extends Component {
                   <i class="fas fa-check-circle"></i>
                 </div>
                 <div className="contact-item-main">
-                  <p className="item-title">GitHub</p>
+                  <p className={this.props.darkMode?"item-title dark":"item-title"}>GitHub</p>
                   <p>
-                    <a href="https://github.com/esiebomaj">@esiebomaj</a>
+                    esiebomaj
                   </p>
                 </div>
               </div>
