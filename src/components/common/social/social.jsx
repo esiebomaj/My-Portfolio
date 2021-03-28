@@ -17,7 +17,7 @@ const Social = () => {
     },
     {
       href: "https://www.instagram.com/jesieboma/",
-      icon: <i class="fab fa-facebook-f"></i>,
+      icon: <i class="fab fa-instagram"></i>,
     },
   ];
   return (
